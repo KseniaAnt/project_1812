@@ -1,0 +1,287 @@
+body {
+    background-color: #abbbc5; /* Цвет фона страницы */
+    color: #333; /* Цвет текста на странице */
+    font-family: Arial, sans-serif; /* Шрифт текста */
+    margin: 0; /* Убираем отступы по умолчанию у body */
+    padding: 0; /* Убираем внутренние отступы по умолчанию у body */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Прозрачный фон навигации */
+    padding: 10px 0;
+    z-index: 1000; /* Устанавливаем высший z-index для навигации */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.intro-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.intro-content {
+    position: relative; /* Устанавливаем позиционирование для текста */
+    z-index: 1; /* Устанавливаем высший z-index для текста, чтобы он был над видео */
+    max-width: 800px;
+    margin: 0 auto; /* Центрируем текст по горизонтали */
+    padding: 20px; /* Добавляем отступы вокруг текста */
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+}
+
+.intro-title {
+    font-size: 48px;
+    line-height: 1.5; /* Межстрочное расстояние */
+}
+
+.intro-section p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .intro-title {
+        font-size: 36px; /* Уменьшаем размер шрифта для мобильных устройств */
+    }
+
+    .intro-section p {
+        font-size: 16px;
+    }
+}
+
+.navbar ul li a {
+    color: white;
+    text-shadow: 0 0 10px black;
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.3s ease; /* Анимация цвета текста при наведении */
+}
+
+.navbar ul li a:hover {
+    color: gold; /* Цвет при наведении */
+    text-shadow: 0 0 5px black;
+}
+
+.intro-content {
+    max-width: 800px; /* Максимальная ширина контента */
+}
+
+.intro-title {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+    background-color: rgba(0, 0, 0, 0.3); /* Непрозрачный черный фон */
+    padding: 10px 20px; /* Отступы вокруг текста */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.war-info-section {
+    background-color: #8e7550; /* Фон секции */
+    padding: 50px 0; /* Отступы для контента */
+}
+
+.container-war {
+    display: flex;
+    align-items: center; /* Выравнивание по центру по вертикали */
+    max-width: 1200px;
+    margin: 0 auto; /* Центрирование по горизонтали */
+}
+
+.image-container {
+    width: 50%; /* Ширина контейнера для изображения */
+    margin-right: 20px; /* Отступ справа */
+}
+
+.image-container img {
+    width: 100%; /* Ширина изображения в контейнере */
+    height: auto; /* Автоматическая высота */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.content {
+    width: 50%; /* Ширина контейнера для текста */
+}
+
+.content-war {
+    font-family: 'Georgia', serif; /* Шрифт заголовка */
+    font-size: 30px; /* Размер шрифта заголовка */
+    margin-bottom: 25px; /* Отступ снизу заголовка */
+    text-align: center;
+}
+
+.content-war h2 {
+    display: inline-block;
+    position: relative;
+    background: #555c45;
+    color: white;
+    margin-bottom: 0;
+    padding: .5rem 3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  .content-war h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 1.5rem solid #8e7550;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
+  }
+  .content-war h2::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: 1.5rem solid #8e7550;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
+  }
+
+.content p {
+    font-size: 20px; /* Размер шрифта текста */
+    line-height: 1.5; /* Межстрочный интервал */
+    color: #C0C0C0; /* Цвет текста */
+    width: 100%;
+}
+
+.history-section {
+    text-align: center; /* Выравнивание по центру */
+    background-color: #555c45;
+    padding: 50px 0; /* Отступы для контента */
+  }
+
+  .content-polc h2 {
+    display: inline-block;
+    position: relative;
+    background: #8e7550;
+    color: white;
+    margin-bottom: 0;
+    padding: .5rem 3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  .content-polc h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 1.5rem solid #555c45;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
+  }
+  .content-polc h2::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: 1.5rem solid #555c45;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 22% 22% 22%; /* Три столбца: авто, 1fr, авто */
+    justify-content: center; /* Выравнивание по горизонтали */
+    gap: 10px; /* Промежуток между элементами */
+  }
+  
+  .grid-item {
+    width: 300px; /* Ширина карточки */
+    height: 450px;
+    background-color: #555c45;
+    padding: 20px;
+    display: flex; /* Добавляем flexbox */
+    flex-direction: column; /* Располагаем элементы в столбец */
+    align-items: center; /* Выравниваем по центру вертикально */
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s; /* Добавляем анимацию переворота */
+    transform-style: preserve-3d; /* Сохраняем 3D-эффект при перевороте */
+  }
+  
+  .card:hover {
+    transform: rotateY(180deg); /* Поворачиваем карточку на 180 градусов при наведении мыши */
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Скрываем обратную сторону карточки */
+  }
+  
+  .front {
+    z-index: 2; /* Передняя сторона поверх задней */
+  }
+  
+  .back {
+    transform: rotateY(180deg); /* Переворачиваем заднюю сторону на 180 градусов */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  
+  .card-info {
+    padding: 10px;
+  }
+  
+  .card-info h3 {
+    margin-top: 0;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .card-info p {
+    margin: 0px 0;
+    color: white;
+    font-size: 16px;
+  }  
+  
